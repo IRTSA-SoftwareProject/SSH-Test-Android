@@ -9,13 +9,15 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SSH Test!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
 
     <Button
         android:id="@+id/sendCommandButton"
@@ -26,9 +28,63 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
-        tools:layout_constraintHeight_max="wrap"
-        tools:layout_constraintHeight_min="wrap"
-        tools:layout_editor_absoluteY="347dp" />
+        app:layout_constraintVertical_bias="0.904" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <ImageView
+        android:id="@+id/scanImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="?attr/colorControlHighlight" />
+
+    <ProgressBar
+        android:id="@+id/scanProgressBar"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/holo_blue_dark"
+        android:indeterminateTintMode="src_in"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/scanImage"
+        app:layout_constraintEnd_toEndOf="@+id/scanImage"
+        app:layout_constraintStart_toStartOf="@+id/scanImage"
+        app:layout_constraintTop_toTopOf="@+id/scanImage" />
+
+    <TextView
+        android:id="@+id/scanProgressText"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanProgressBar" /><![CDATA[
+
+
+
+    //>
+
+
+]]>
 </android.support.constraint.ConstraintLayout>
