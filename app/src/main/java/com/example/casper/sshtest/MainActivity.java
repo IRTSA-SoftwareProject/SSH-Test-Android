@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         mSendCommandButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                mSendCommandButton.setText("Sending Command!");
+                mScanImage.setImageResource(0);
                 mScanProgressBar.setVisibility(View.VISIBLE);
                 mScanProgressText.setText("Connecting");
                 mScanProgressText.setVisibility(View.VISIBLE);
